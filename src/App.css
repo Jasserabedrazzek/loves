@@ -1,0 +1,94 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.App {
+  text-align: center;
+  background: #ffccf9;
+  min-height: 100vh;
+  padding: 40px;
+  font-family: 'Cairo', sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.start-btn {
+  font-size: 24px;
+  padding: 15px 30px;
+  background: #ff69b4;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.cake {
+  width: 200px;
+  margin-top: 20px;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+.message-box {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #6b006b;
+  background: #fff0f6;
+  padding: 20px;
+  border-radius: 15px;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 0 10px #ff69b4;
+  line-height: 30px;
+}
+
+.api-message {
+  font-weight: bold;
+  color: #ff007f;
+}
+
+.heart {
+  width: 20px;
+  height: 20px;
+  background: red;
+  position: fixed;
+  top: 100%;
+  animation: floatHeart 3s linear forwards;
+  transform: rotate(45deg);
+}
+
+.heart::before,
+.heart::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background: red;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.heart::before {
+  top: -10px;
+  left: 0;
+}
+
+.heart::after {
+  left: -10px;
+  top: 0;
+}
+
+@keyframes floatHeart {
+  0% {
+    top: 100%;
+    opacity: 1;
+  }
+  100% {
+    top: 0%;
+    opacity: 0;
+  }
+}
